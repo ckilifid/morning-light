@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Morning Light</title>
+<meta name="description" content="Morning Light in Mustang Pens. Oil paintings by Ellen Dudley.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="These are Wyoming wild horses, painted by my mom. We don&#x27;t know what comes next for this collection, and we&#x27;d like your advice.">
+<meta property="og:description" content="Morning Light in Mustang Pens. Oil paintings by Ellen Dudley.">
+<meta property="og:image" content="https://ckilifid.github.io/morning-light/img/42797d651c47bf5f22dc4a60e07f8d85.jpg">
+<meta property="og:url" content="https://ckilifid.github.io/morning-light/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="robots" content="noindex">
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bone-50: #F6F2EB; --bone-100: #EFE9DF; --bone-200: #E4DCCF; --bone-300: #D3C9B9;
+  --umber-400: #8A7A69; --umber-600: #5E4F41; --umber-800: #3A2E24; --umber-900: #241B14;
+  --sienna-500: #A4552F; --sienna-700: #7E3F21; --sienna-100: #EADBCB;
+  --sage-500: #7F8C6E; --sage-700: #556147; --sage-100: #DFE2D3;
+  --bg: var(--bone-100); --surface: var(--bone-50); --surface-recessed: var(--bone-200);
+  --fg-1: var(--umber-900); --fg-2: var(--umber-600); --fg-3: var(--umber-400);
+  --rule: var(--bone-300); --rule-strong: var(--umber-900);
+  --accent: var(--sienna-500); --accent-ink: var(--sienna-700); --accent-wash: var(--sienna-100);
+  --focus-ring: var(--umber-900);
+
+  --font-serif: "Cormorant Garamond", "Libre Caslon Text", Georgia, serif;
+  --font-sans: "Instrument Sans", "Karla", "Helvetica Neue", sans-serif;
+  --text-display: 72px; --text-h1: 56px; --text-h2: 40px; --text-h3: 30px; --text-h4: 24px;
+  --text-lede: 22px; --text-essay: 21px;
+  --text-body: 16px; --text-small: 14px; --text-meta: 13px; --text-label: 11px;
+  --leading-tight: 1.08; --leading-heading: 1.18; --leading-body: 1.6; --leading-essay: 1.55;
+  --tracking-label: 0.18em; --tracking-display: -0.01em;
+  --weight-regular: 400; --weight-medium: 500; --weight-semibold: 600;
+  --measure: 64ch;
+
+  --space-1: 4px; --space-2: 8px; --space-3: 12px; --space-4: 16px; --space-5: 24px;
+  --space-6: 32px; --space-7: 48px; --space-8: 64px; --space-9: 96px; --space-10: 128px; --space-11: 160px;
+  --radius: 0px; --hairline: 1px; --rule-weight: 1px; --shadow: none;
+  --duration-fast: 120ms; --duration: 200ms; --duration-slow: 400ms; --ease: cubic-bezier(0.25, 0.1, 0.25, 1);
+  --page-max: 1440px; --gutter: clamp(24px, 5vw, 96px);
+}
+
+body { margin: 0; }
+* { box-sizing: border-box; }
+
+.page {
+  background: var(--bg);
+  color: var(--fg-1);
+  font-family: var(--font-sans);
+  font-size: var(--text-body);
+  line-height: var(--leading-body);
+  -webkit-font-smoothing: antialiased;
+  width: 390px;
+  min-height: 844px;
+  margin: 0 auto;
+}
+
+.label {
+  font-family: var(--font-sans); font-size: var(--text-label); font-weight: var(--weight-medium);
+  letter-spacing: var(--tracking-label); text-transform: uppercase; color: var(--fg-3);
+}
+
+/* Hero */
+.hero { min-height: 100vh; display: flex; flex-direction: column; }
+.hero-grid {
+  flex: 1 1 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: 1fr;
+  gap: var(--space-3);
+  padding: var(--space-5) var(--space-5) 0;
+}
+.hero-grid img { width: 100%; height: 100%; object-fit: cover; display: block; background: var(--surface); }
+.hero-hook {
+  flex: 0 0 auto; margin: 0; padding: var(--space-6) var(--space-5) var(--space-7);
+  font-family: var(--font-serif); font-weight: var(--weight-regular);
+  font-size: var(--text-h4); line-height: 1.3; color: var(--fg-1); text-wrap: pretty;
+}
+
+/* Collection: problem copy + grid */
+.collection { border-top: 1px solid var(--rule); padding-bottom: var(--space-8); }
+.collection-copy {
+  margin: 0; padding: var(--space-7) var(--space-5) var(--space-3);
+  font-family: var(--font-serif); font-weight: var(--weight-regular);
+  font-size: var(--text-h4); line-height: 1.3; color: var(--fg-1); text-wrap: pretty;
+}
+.collection-eyebrow { padding: var(--space-7) var(--space-5) 0; font-family: var(--font-serif); font-weight: var(--weight-regular); font-size: var(--text-h2); line-height: 1.1; letter-spacing: var(--tracking-display); color: var(--fg-1); }
+.collection-grid {
+  display: grid; grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-4); padding: var(--space-5) var(--space-5) 0; align-items: start;
+}
+.thumb { width: 100%; height: auto; display: block; background: var(--surface); }
+.collection-figure { margin: var(--space-6) var(--space-5) 0; aspect-ratio: 16 / 10; overflow: hidden; -webkit-mask-image: radial-gradient(ellipse 100% 100% at 50% 50%, #000 38%, transparent 88%); mask-image: radial-gradient(ellipse 100% 100% at 50% 50%, #000 38%, transparent 88%); }
+.collection-figure img { width: 100%; height: 100%; display: block; object-fit: cover; object-position: 42% 52%; transform: scale(1.35); transform-origin: 42% 52%; }
+
+/* The paintings, each shown whole */
+.paintings { border-top: 1px solid var(--rule); padding: var(--space-6) var(--space-5) var(--space-8); display: flex; flex-direction: column; gap: var(--space-8); }
+.morning-title { font-family: var(--font-serif); font-weight: var(--weight-regular); font-size: var(--text-h2); line-height: 1.1; margin: 0 0 var(--space-5); }
+.morning-desc { font-size: var(--text-body); line-height: var(--leading-body); color: var(--fg-2); margin: 0 0 var(--space-6); max-width: var(--measure); }
+.morning-quote { font-family: var(--font-serif); font-style: italic; font-size: var(--text-h4); line-height: 1.3; color: var(--fg-1); margin: 0; padding-left: var(--space-5); border-left: 1px solid var(--rule-strong); }
+.morning-quote cite { display: block; margin-top: var(--space-3); font-family: var(--font-sans); font-style: normal; font-size: var(--text-label); letter-spacing: var(--tracking-label); text-transform: uppercase; color: var(--fg-3); }
+.plate { margin: 0; }
+.plate-img { width: 100%; height: auto; display: block; background: var(--surface); }
+.plate-cap { display: flex; flex-direction: column; gap: var(--space-1); margin-top: var(--space-4); }
+.plate-title { font-family: var(--font-serif); font-style: italic; font-size: var(--text-h4); line-height: 1.15; color: var(--fg-1); }
+.plate-size { font-family: var(--font-sans); font-size: var(--text-small); color: var(--fg-2); }
+
+/* Call to action (image slot pending) */
+.cta { border-top: 1px solid var(--rule); padding: var(--space-7) var(--space-5) var(--space-8); }
+.cta-figure { overflow: hidden; -webkit-mask-image: radial-gradient(ellipse 100% 100% at 50% 50%, #000 38%, transparent 88%); mask-image: radial-gradient(ellipse 100% 100% at 50% 50%, #000 38%, transparent 88%); }
+.cta-figure img { width: 100%; height: auto; display: block; }
+.cta-copy { margin: var(--space-6) 0 0; }
+.watch-link { position: relative; display: block; text-decoration: none; color: inherit; }
+.watch-badge { position: absolute; top: 50%; left: 50%; width: 64px; transform: translate(-50%, -50%); pointer-events: none; }
+.watch-badge svg { display: block; width: 100%; height: auto; }
+.watch-title { font-family: var(--font-serif); font-weight: var(--weight-regular); font-size: var(--text-h4); line-height: 1.2; margin: 0; }
+.watch-meta { font-family: var(--font-sans); font-size: var(--text-small); color: var(--fg-2); margin: var(--space-2) 0 0; }
+
+.solution { border-top: 1px solid var(--rule); padding: var(--space-7) var(--space-5) var(--space-8); }
+.solution-title { font-family: var(--font-serif); font-weight: var(--weight-regular); font-size: var(--text-h2); line-height: 1.1; margin: 0 0 var(--space-5); }
+.solution-copy { font-size: var(--text-body); line-height: var(--leading-body); color: var(--fg-1); margin: 0 0 var(--space-6); max-width: var(--measure); }
+.solution-lead { font-family: var(--font-sans); font-size: var(--text-label); font-weight: var(--weight-medium); letter-spacing: var(--tracking-label); text-transform: uppercase; color: var(--fg-3); margin: 0 0 var(--space-2); }
+.solution-kinds { list-style: none; margin: 0 0 var(--space-7); padding: 0; }
+.solution-kinds li { font-family: var(--font-serif); font-size: var(--text-lede); line-height: 1.3; color: var(--fg-1); padding: var(--space-4) 0; border-top: 1px solid var(--rule); }
+.solution-kinds li:last-child { border-bottom: 1px solid var(--rule); }
+.contact-btn { display: inline-flex; align-items: center; justify-content: center; min-height: 52px; padding: 0 var(--space-6); background: var(--fg-1); color: var(--bg); text-decoration: none; font-family: var(--font-sans); font-weight: var(--weight-medium); font-size: var(--text-body); }
+.contact-alt { margin: var(--space-4) 0 0; }
+.contact-num { font-size: var(--text-lede); user-select: all; }
+
+/* Proof (pending) */
+.proof { border-top: 1px solid var(--rule); padding: var(--space-8) var(--space-5) var(--space-9); }
+.proof-title { font-family: var(--font-serif); font-weight: var(--weight-regular); font-size: var(--text-h2); line-height: 1.1; margin: 0 0 var(--space-5); }
+.proof-copy { font-size: var(--text-body); line-height: var(--leading-body); color: var(--fg-1); margin: 0 0 var(--space-4); max-width: var(--measure); }
+
+.pending { display: inline-block; margin-top: var(--space-3); font-size: var(--text-meta); color: var(--accent-ink); border: 1px dashed var(--rule); padding: var(--space-2) var(--space-3); }
+
+a {
+  color: inherit; text-decoration: underline; text-decoration-thickness: 1px;
+  text-underline-offset: 3px; text-decoration-color: var(--rule);
+  transition: text-decoration-color var(--duration-fast) var(--ease);
+}
+a:hover { text-decoration-color: var(--accent); }
+::selection { background: var(--accent-wash); }
+:focus-visible { outline: 1px solid var(--focus-ring); outline-offset: 3px; }
+</style>
+
+</head>
+<body>
+<div class="page">
+
+  <section class="hero">
+    <div class="hero-grid">
+      <img src="img/42797d651c47bf5f22dc4a60e07f8d85.jpg" alt="Jade" style="object-position: 30% center;">
+      <img src="img/10a42f6722bc8edd08097814ad310bc9.jpg" alt="Looking for Mustang Sally">
+      <img src="img/e7597acacca7deb1687cff3c6b4d04b0.jpg" alt="Now What" style="object-position: 85% center;">
+      <img src="img/3eb1cdb259f241f887d6ed5e28f38439.jpg" alt="Brave New World" style="object-position: 72% center;">
+    </div>
+    <p class="hero-hook">These are Wyoming wild horses, painted by my mom. We don't know what comes next for this collection, and we'd like your advice.</p>
+  </section>
+
+  <section class="collection">
+    <div class="collection-eyebrow">The Help We Seek</div>
+    <p class="collection-copy">The family is raising funds for Ellen's care. We hope to do it by placing this collection with a person or group it genuinely fits.</p>
+    <div class="collection-figure"><img src="img/7c9cfcff149a68155715df420b34723c.jpg" alt="Ellen in the gallery at the Brinton Museum"></div>
+  </section>
+
+  <section class="paintings">
+    <header class="morning-intro">
+      <h2 class="morning-title">Morning Light in Mustang Pens</h2>
+      <p class="morning-desc">Wild horses, gathered into roundup pens and painted in early light. Ellen went to the roundups and photographed the herd — the horses coming in from the wild, circling the pen, then settling and finding their families. The paintings are where her fascination with light meets these animals.</p>
+      <blockquote class="morning-quote">What I love to paint is light.<cite>Ellen</cite></blockquote>
+    </header>
+          <figure class="plate">
+        <img class="plate-img" src="img/3309837d86b07935776e6355a6b1f8d6.jpg" alt="Aurorae" loading="lazy">
+        <figcaption class="plate-cap">
+          <span class="plate-title">Aurorae</span>
+          <span class="plate-size">28 × 22 in.</span>
+        </figcaption>
+      </figure>
+      <figure class="plate">
+        <img class="plate-img" src="img/3eb1cdb259f241f887d6ed5e28f38439.jpg" alt="Brave New World" loading="lazy">
+        <figcaption class="plate-cap">
+          <span class="plate-title">Brave New World</span>
+          <span class="plate-size">30 × 24 in.</span>
+        </figcaption>
+      </figure>
+      <figure class="plate">
+        <img class="plate-img" src="img/888325281b06f74e0d0c03a6de5bde28.jpg" alt="Cross Currents" loading="lazy">
+        <figcaption class="plate-cap">
+          <span class="plate-title">Cross Currents</span>
+          <span class="plate-size">36 × 18 in.</span>
+        </figcaption>
+      </figure>
+      <figure class="plate">
+        <img class="plate-img" src="img/c9bb54743629334b2dfbd99cfccd3714.jpg" alt="Dapple Doppler" loading="lazy">
+        <figcaption class="plate-cap">
+          <span class="plate-title">Dapple Doppler</span>
+          <span class="plate-size">24 × 20 in.</span>
+        </figcaption>
+      </figure>
+      <figure class="plate">
+        <img class="plate-img" src="img/0064813aa1159a64d81378776bfbd7ae.jpg" alt="Heads Over Tails" loading="lazy">
+        <figcaption class="plate-cap">
+          <span class="plate-title">Heads Over Tails</span>
+          <span class="plate-size">30 × 20 in.</span>
+        </figcaption>
+      </figure>
+      <figure class="plate">
+        <img class="plate-img" src="img/42797d651c47bf5f22dc4a60e07f8d85.jpg" alt="Jade" loading="lazy">
+        <figcaption class="plate-cap">
+          <span class="plate-title">Jade</span>
+          <span class="plate-size">24 × 24 in.</span>
+        </figcaption>
+      </figure>
+      <figure class="plate">
+        <img class="plate-img" src="img/5a93de7a11aceef7a8beeaae26691def.jpg" alt="Looking Back" loading="lazy">
+        <figcaption class="plate-cap">
+          <span class="plate-title">Looking Back</span>
+          <span class="plate-size">28 × 22 in.</span>
+        </figcaption>
+      </figure>
+      <figure class="plate">
+        <img class="plate-img" src="img/10a42f6722bc8edd08097814ad310bc9.jpg" alt="Looking for Mustang Sally" loading="lazy">
+        <figcaption class="plate-cap">
+          <span class="plate-title">Looking for Mustang Sally</span>
+          <span class="plate-size">20 × 24 in.</span>
+        </figcaption>
+      </figure>
+      <figure class="plate">
+        <img class="plate-img" src="img/f02611b20d472b65907bb0193c924b5c.jpg" alt="Moving Toward Morning" loading="lazy">
+        <figcaption class="plate-cap">
+          <span class="plate-title">Moving Toward Morning</span>
+          <span class="plate-size">48 × 24 in.</span>
+        </figcaption>
+      </figure>
+      <figure class="plate">
+        <img class="plate-img" src="img/e7597acacca7deb1687cff3c6b4d04b0.jpg" alt="Now What" loading="lazy">
+        <figcaption class="plate-cap">
+          <span class="plate-title">Now What</span>
+          <span class="plate-size">24 × 18 in.</span>
+        </figcaption>
+      </figure>
+      <figure class="plate">
+        <img class="plate-img" src="img/6f9220c7cfe768ccea8796f3266d6419.jpg" alt="Shadow Halters" loading="lazy">
+        <figcaption class="plate-cap">
+          <span class="plate-title">Shadow Halters</span>
+          <span class="plate-size">36 × 24 in.</span>
+        </figcaption>
+      </figure>
+      <figure class="plate">
+        <img class="plate-img" src="img/5021ee4cc0784eb05752e97fb4775663.jpg" alt="Staying Close" loading="lazy">
+        <figcaption class="plate-cap">
+          <span class="plate-title">Staying Close</span>
+          <span class="plate-size">36 × 24 in.</span>
+        </figcaption>
+      </figure>
+      <figure class="plate">
+        <img class="plate-img" src="img/4ad483ac1604557d0996aa2dfd617469.jpg" alt="The Inspection" loading="lazy">
+        <figcaption class="plate-cap">
+          <span class="plate-title">The Inspection</span>
+          <span class="plate-size">24 × 20 in.</span>
+        </figcaption>
+      </figure>
+      <figure class="plate">
+        <img class="plate-img" src="img/273a88d2727531c44b0e9b24854b7ed1.jpg" alt="The Veil" loading="lazy">
+        <figcaption class="plate-cap">
+          <span class="plate-title">The Veil</span>
+          <span class="plate-size">36 × 18 in.</span>
+        </figcaption>
+      </figure>
+      <figure class="plate">
+        <img class="plate-img" src="img/f134f85fe2f2586f7f9ef3f27484c4e8.jpg" alt="Titans" loading="lazy">
+        <figcaption class="plate-cap">
+          <span class="plate-title">Titans</span>
+          <span class="plate-size">24 × 24 in.</span>
+        </figcaption>
+      </figure>
+      <figure class="plate">
+        <img class="plate-img" src="img/ba70a7feaa6219714cf933e95e3d0ae3.jpg" alt="Unseen Fence" loading="lazy">
+        <figcaption class="plate-cap">
+          <span class="plate-title">Unseen Fence</span>
+          <span class="plate-size">24 × 18 in.</span>
+        </figcaption>
+      </figure>
+      <figure class="plate">
+        <img class="plate-img" src="img/374722e13fb79863332c5e193d688a4c.jpg" alt="Where is Home" loading="lazy">
+        <figcaption class="plate-cap">
+          <span class="plate-title">Where is Home</span>
+          <span class="plate-size">24 × 24 in.</span>
+        </figcaption>
+      </figure>
+    <blockquote class="morning-quote">I just feel so lucky that I fell into this. I was always painting them running — the iconic freedom theme — but here it's something different.<cite>Ellen</cite></blockquote>
+  </section>
+
+  <section class="cta">
+    <a class="watch-link" href="https://www.youtube.com/watch?v=tyzeH2hGyrs" target="_blank" rel="noopener">
+      <div class="cta-figure"><img src="img/172505a414133c55b59a543e89b3d4ad.jpg" alt="Ellen speaking at the Brinton Museum"></div>
+      <span class="watch-badge" aria-hidden="true"><svg viewBox="0 0 68 48" xmlns="http://www.w3.org/2000/svg"><path d="M66.52 7.74c-.78-2.93-2.49-5.41-5.42-6.19C55.79.13 34 .13 34 .13s-21.79 0-27.1 1.42c-2.93.78-4.64 3.26-5.42 6.19C.06 13.05.06 24 .06 24s0 10.95 1.42 16.26c.78 2.93 2.49 5.41 5.42 6.19C12.21 47.87 34 47.87 34 47.87s21.79 0 27.1-1.42c2.93-.78 4.64-3.26 5.42-6.19C67.94 34.95 67.94 24 67.94 24s0-10.95-1.42-16.26z" fill="#FF0000"/><path d="M27.2 34.4L44.8 24 27.2 13.6z" fill="#ffffff"/></svg></span>
+    </a>
+    <div class="cta-copy">
+      <p class="watch-title">Ellen's gallery talk at the Brinton Museum, 2020</p>
+      <p class="watch-meta">About 15 minutes · tap the image to play on YouTube</p>
+    </div>
+  </section>
+
+  <section class="solution">
+    <h2 class="solution-title">We're grateful for any help from people who know this world — your read on what we're after, or a name we should talk to.</h2>
+    <a class="contact-btn" href="sms:+10000000000?&body=Hi%20Casey%2C%20I%27d%20like%20to%20talk%20about%20Ellen%27s%20collection.">Text Casey</a>
+    <p class="contact-alt"><span class="contact-num">(000) 000-0000</span> <span class="pending">number pending</span></p>
+  </section>
+
+  <section class="proof">
+    <h2 class="proof-title">Ellen's work</h2>
+    <p class="proof-copy">Ellen trained at Pratt. Her work took her to Africa to paint its animals, then back to the States, drawn to the West and the animals that call the Rocky Mountains home.</p>
+    <span class="pending">Career details pending Ellen's confirmation · images pending</span>
+  </section>
+
+</div>
+</body>
+</html>
