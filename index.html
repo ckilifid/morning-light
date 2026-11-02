@@ -137,6 +137,14 @@ body { margin: 0; }
 
 .pending { display: inline-block; margin-top: var(--space-3); font-size: var(--text-meta); color: var(--accent-ink); border: 1px dashed var(--rule); padding: var(--space-2) var(--space-3); }
 
+/* Ellen's work gallery + tap-to-enlarge lightbox */
+.gallery { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-4); margin: var(--space-6) 0 var(--space-5); }
+.gallery-thumb { display: block; background: var(--surface); text-decoration: none; cursor: zoom-in; }
+.gallery-thumb img { width: 100%; height: 150px; object-fit: cover; display: block; }
+.lightbox { position: fixed; inset: 0; display: none; align-items: center; justify-content: center; background: rgba(24,18,12,0.94); padding: var(--space-5); z-index: 100; cursor: zoom-out; text-decoration: none; }
+.lightbox:target { display: flex; }
+.lightbox img { max-width: 100%; max-height: 100%; width: auto; height: auto; object-fit: contain; }
+
 a {
   color: inherit; text-decoration: underline; text-decoration-thickness: 1px;
   text-underline-offset: 3px; text-decoration-color: var(--rule);
@@ -315,7 +323,21 @@ a:hover { text-decoration-color: var(--accent); }
   <section class="proof">
     <h2 class="proof-title">Ellen's work</h2>
     <p class="proof-copy">Ellen trained at Pratt. Her work took her to Africa to paint its animals, then back to the States, drawn to the West and the animals that call the Rocky Mountains home.</p>
-    <span class="pending">Career details pending Ellen's confirmation · images pending</span>
+    <div class="gallery" id="ellens-gallery">
+      <a class="gallery-thumb" href="#art-buck" aria-label="Enlarge painting of a mule deer buck"><img src="img/4a57bad038aade624aa091fba852b078.jpg" alt="Mule deer buck, painting by Ellen Dudley"></a>
+      <a class="gallery-thumb" href="#art-ram" aria-label="Enlarge painting of a bighorn ram"><img src="img/0babe0292fa578813de59f9ace8183a7.jpg" alt="Bighorn ram, painting by Ellen Dudley"></a>
+      <a class="gallery-thumb" href="#art-deer" aria-label="Enlarge painting of two deer"><img src="img/c6a7c625cc7b13341f1ea480ebc06bdc.jpg" alt="Two deer, painting by Ellen Dudley"></a>
+      <a class="gallery-thumb" href="#art-wolf" aria-label="Enlarge painting of a wolf"><img src="img/a117c75471cc56f449ffddaf2fd45b32.jpg" alt="Wolf, painting by Ellen Dudley"></a>
+      <a class="gallery-thumb" href="#art-giraffe" aria-label="Enlarge painting of a giraffe"><img src="img/a395c13e28e909f308b88118713c6550.jpg" alt="Giraffe, painting by Ellen Dudley"></a>
+      <a class="gallery-thumb" href="#art-lion" aria-label="Enlarge painting of a lion"><img src="img/c6ab0fcf085c44ead3496dd7551c7794.jpg" alt="Lion, painting by Ellen Dudley"></a>
+    </div>
+    <span class="pending">Career details pending Ellen's confirmation</span>
+    <a class="lightbox" id="art-buck" href="#ellens-gallery" aria-label="Close enlarged painting"><img src="img/4a57bad038aade624aa091fba852b078.jpg" alt="Mule deer buck, painting by Ellen Dudley"></a>
+    <a class="lightbox" id="art-ram" href="#ellens-gallery" aria-label="Close enlarged painting"><img src="img/0babe0292fa578813de59f9ace8183a7.jpg" alt="Bighorn ram, painting by Ellen Dudley"></a>
+    <a class="lightbox" id="art-deer" href="#ellens-gallery" aria-label="Close enlarged painting"><img src="img/c6a7c625cc7b13341f1ea480ebc06bdc.jpg" alt="Two deer, painting by Ellen Dudley"></a>
+    <a class="lightbox" id="art-wolf" href="#ellens-gallery" aria-label="Close enlarged painting"><img src="img/a117c75471cc56f449ffddaf2fd45b32.jpg" alt="Wolf, painting by Ellen Dudley"></a>
+    <a class="lightbox" id="art-giraffe" href="#ellens-gallery" aria-label="Close enlarged painting"><img src="img/a395c13e28e909f308b88118713c6550.jpg" alt="Giraffe, painting by Ellen Dudley"></a>
+    <a class="lightbox" id="art-lion" href="#ellens-gallery" aria-label="Close enlarged painting"><img src="img/c6ab0fcf085c44ead3496dd7551c7794.jpg" alt="Lion, painting by Ellen Dudley"></a>
   </section>
 
 </div>
