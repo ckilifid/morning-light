@@ -129,6 +129,8 @@ body { margin: 0; }
 .contact-btn { display: inline-flex; align-items: center; justify-content: center; min-height: 52px; padding: 0 var(--space-6); background: var(--fg-1); color: var(--bg); text-decoration: none; font-family: var(--font-sans); font-weight: var(--weight-medium); font-size: var(--text-body); }
 .contact-alt { margin: var(--space-4) 0 0; }
 .contact-num { font-size: var(--text-lede); user-select: all; }
+.copy-btn { margin-left: var(--space-3); min-height: 40px; padding: 0 var(--space-4); background: none; border: 1px solid var(--rule-strong); color: var(--fg-1); font-family: var(--font-sans); font-size: var(--text-small); cursor: pointer; }
+.copy-btn:hover { background: var(--surface-recessed); }
 
 /* Proof (pending) */
 .proof { border-top: 1px solid var(--rule); padding: var(--space-8) var(--space-5) var(--space-9); }
@@ -316,25 +318,25 @@ a:hover { text-decoration-color: var(--accent); }
 
   <section class="solution">
     <h2 class="solution-title">We're grateful for any help from people who know this world — your read on what we're after, or a name we should talk to.</h2>
-    <a class="contact-btn" href="sms:+10000000000?&body=Hi%20Casey%2C%20I%27d%20like%20to%20talk%20about%20Ellen%27s%20collection.">Text Casey</a>
-    <p class="contact-alt"><span class="contact-num">(000) 000-0000</span> <span class="pending">number pending</span></p>
+    <a class="contact-btn" href="sms:+14066025383?&body=Hi%20Casey%2C%20I%27m%20%5Bname%5D.%20I%27d%20like%20to%20talk%20about%20your%20mom%27s%20artwork.">Text Casey</a>
+    <p class="contact-alt"><span class="contact-num">(406) 602-5383</span> <button class="copy-btn" type="button" onclick="if(navigator.clipboard){navigator.clipboard.writeText('(406) 602-5383');this.textContent='Copied';}">Copy</button></p>
   </section>
 
   <section class="proof">
     <h2 class="proof-title">Ellen's work</h2>
     <p class="proof-copy">Ellen trained at Pratt. Her work took her to Africa to paint its animals, then back to the States, drawn to the West and the animals that call the Rocky Mountains home.</p>
+    <p class="proof-copy">Her paintings have found their way into galleries from Aspen, Jackson, Bozeman, Cody, and Saratoga.</p>
     <div class="gallery" id="ellens-gallery">
-      <a class="gallery-thumb" href="#art-buck" aria-label="Enlarge painting of a mule deer buck"><img src="img/4a57bad038aade624aa091fba852b078.jpg" alt="Mule deer buck, painting by Ellen Dudley"></a>
-      <a class="gallery-thumb" href="#art-ram" aria-label="Enlarge painting of a bighorn ram"><img src="img/0babe0292fa578813de59f9ace8183a7.jpg" alt="Bighorn ram, painting by Ellen Dudley"></a>
-      <a class="gallery-thumb" href="#art-deer" aria-label="Enlarge painting of two deer"><img src="img/c6a7c625cc7b13341f1ea480ebc06bdc.jpg" alt="Two deer, painting by Ellen Dudley"></a>
-      <a class="gallery-thumb" href="#art-wolf" aria-label="Enlarge painting of a wolf"><img src="img/a117c75471cc56f449ffddaf2fd45b32.jpg" alt="Wolf, painting by Ellen Dudley"></a>
       <a class="gallery-thumb" href="#art-giraffe" aria-label="Enlarge painting of a giraffe"><img src="img/a395c13e28e909f308b88118713c6550.jpg" alt="Giraffe, painting by Ellen Dudley"></a>
       <a class="gallery-thumb" href="#art-lion" aria-label="Enlarge painting of a lion"><img src="img/c6ab0fcf085c44ead3496dd7551c7794.jpg" alt="Lion, painting by Ellen Dudley"></a>
+      <a class="gallery-thumb" href="#art-buck" aria-label="Enlarge painting of a mule deer buck"><img src="img/4a57bad038aade624aa091fba852b078.jpg" alt="Mule deer buck, painting by Ellen Dudley"></a>
+      <a class="gallery-thumb" href="#art-ram" aria-label="Enlarge painting of a bighorn ram"><img src="img/0babe0292fa578813de59f9ace8183a7.jpg" alt="Bighorn ram, painting by Ellen Dudley"></a>
+      <a class="gallery-thumb" href="#art-deer" aria-label="Enlarge painting of two deer"><img src="img/b27889423f5be495866ecc8e2c3e445f.jpg" alt="Two deer, painting by Ellen Dudley"></a>
+      <a class="gallery-thumb" href="#art-wolf" aria-label="Enlarge painting of a wolf"><img src="img/a117c75471cc56f449ffddaf2fd45b32.jpg" alt="Wolf, painting by Ellen Dudley"></a>
     </div>
-    <span class="pending">Career details pending Ellen's confirmation</span>
     <a class="lightbox" id="art-buck" href="#ellens-gallery" aria-label="Close enlarged painting"><img src="img/4a57bad038aade624aa091fba852b078.jpg" alt="Mule deer buck, painting by Ellen Dudley"></a>
     <a class="lightbox" id="art-ram" href="#ellens-gallery" aria-label="Close enlarged painting"><img src="img/0babe0292fa578813de59f9ace8183a7.jpg" alt="Bighorn ram, painting by Ellen Dudley"></a>
-    <a class="lightbox" id="art-deer" href="#ellens-gallery" aria-label="Close enlarged painting"><img src="img/c6a7c625cc7b13341f1ea480ebc06bdc.jpg" alt="Two deer, painting by Ellen Dudley"></a>
+    <a class="lightbox" id="art-deer" href="#ellens-gallery" aria-label="Close enlarged painting"><img src="img/b27889423f5be495866ecc8e2c3e445f.jpg" alt="Two deer, painting by Ellen Dudley"></a>
     <a class="lightbox" id="art-wolf" href="#ellens-gallery" aria-label="Close enlarged painting"><img src="img/a117c75471cc56f449ffddaf2fd45b32.jpg" alt="Wolf, painting by Ellen Dudley"></a>
     <a class="lightbox" id="art-giraffe" href="#ellens-gallery" aria-label="Close enlarged painting"><img src="img/a395c13e28e909f308b88118713c6550.jpg" alt="Giraffe, painting by Ellen Dudley"></a>
     <a class="lightbox" id="art-lion" href="#ellens-gallery" aria-label="Close enlarged painting"><img src="img/c6ab0fcf085c44ead3496dd7551c7794.jpg" alt="Lion, painting by Ellen Dudley"></a>
