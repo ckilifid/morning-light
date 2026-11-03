@@ -75,7 +75,7 @@ body { margin: 0; }
 }
 .hero-grid img { width: 100%; height: 100%; object-fit: cover; display: block; background: var(--surface); }
 .hero-hook {
-  flex: 0 0 auto; margin: 0; padding: var(--space-6) var(--space-5) var(--space-7);
+  flex: 0 0 auto; margin: 0; padding: var(--space-6) var(--space-5) var(--space-5);
   font-family: var(--font-serif); font-weight: var(--weight-regular);
   font-size: var(--text-h4); line-height: 1.45; color: var(--fg-1); text-wrap: pretty;
 }
@@ -83,12 +83,13 @@ body { margin: 0; }
 .hero-hook .ask { display: block; margin-top: var(--space-5); }
 
 /* Collection: problem copy + grid */
-.collection { border-top: 1px solid var(--rule); padding-bottom: var(--space-8); }
+.collection { border-top: 1px solid var(--rule); padding-bottom: var(--space-6); }
 .collection-copy {
   margin: 0; padding: var(--space-7) var(--space-5) var(--space-3);
   font-family: var(--font-serif); font-weight: var(--weight-regular);
   font-size: var(--text-h4); line-height: 1.3; color: var(--fg-1); text-wrap: pretty;
 }
+.collection-copy.copy-cont { padding-top: var(--space-4); }
 .collection-eyebrow { padding: var(--space-7) var(--space-5) 0; font-family: var(--font-serif); font-weight: var(--weight-regular); font-size: var(--text-h2); line-height: 1.1; letter-spacing: var(--tracking-display); color: var(--fg-1); }
 .collection-grid {
   display: grid; grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -100,11 +101,18 @@ body { margin: 0; }
 .figure-cap { margin: var(--space-3) var(--space-5) 0; font-family: var(--font-sans); font-size: var(--text-small); line-height: var(--leading-body); color: var(--fg-2); }
 
 /* The paintings, each shown whole */
-.paintings { border-top: 1px solid var(--rule); padding: var(--space-6) var(--space-5) var(--space-8); display: flex; flex-direction: column; gap: var(--space-8); }
-.morning-title { font-family: var(--font-serif); font-weight: var(--weight-regular); font-size: var(--text-h2); line-height: 1.1; margin: 0 0 var(--space-5); }
-.morning-desc { font-size: var(--text-body); line-height: var(--leading-body); color: var(--fg-2); margin: 0 0 var(--space-6); max-width: var(--measure); }
-.morning-quote { font-family: var(--font-serif); font-style: italic; font-size: var(--text-h4); line-height: 1.3; color: var(--fg-1); margin: 0; padding-left: var(--space-5); border-left: 1px solid var(--rule-strong); }
+.paintings { border-top: 1px solid var(--rule); padding: var(--space-6) var(--space-5) var(--space-6); display: flex; flex-direction: column; gap: var(--space-7); }
+.morning-intro { margin-bottom: calc(var(--space-5) - var(--space-7)); }
+.morning-title { font-family: var(--font-serif); font-weight: var(--weight-regular); font-size: var(--text-h2); line-height: 1.1; margin: 0 0 var(--space-2); }
+.morning-caption { margin: 0 0 var(--space-5); font-family: var(--font-sans); font-size: var(--text-small); line-height: var(--leading-body); color: var(--fg-2); }
+.morning-desc { font-size: var(--text-body); line-height: var(--leading-body); color: var(--fg-2); margin: 0; max-width: var(--measure); }
+.morning-quote { font-family: var(--font-serif); font-style: italic; font-size: var(--text-h4); line-height: 1.3; color: var(--fg-1); margin: 0 0 var(--space-6); padding-left: var(--space-5); border-left: 1px solid var(--rule-strong); }
 .morning-quote cite { display: block; margin-top: var(--space-3); font-family: var(--font-sans); font-style: normal; font-size: var(--text-label); letter-spacing: var(--tracking-label); text-transform: uppercase; color: var(--fg-3); }
+.morning-figure { margin: var(--space-5) 0 0; aspect-ratio: 16 / 10; overflow: hidden; -webkit-mask-image: radial-gradient(ellipse 100% 100% at 50% 50%, #000 38%, transparent 88%); mask-image: radial-gradient(ellipse 100% 100% at 50% 50%, #000 38%, transparent 88%); }
+.morning-figure img { width: 100%; height: 100%; display: block; object-fit: cover; object-position: 42% 52%; transform: scale(1.35); transform-origin: 42% 52%; }
+.morning-figcap { margin: var(--space-3) 0 var(--space-5); font-family: var(--font-sans); font-size: var(--text-small); line-height: var(--leading-body); color: var(--fg-2); }
+.connect { padding: var(--space-7) var(--space-5); background: var(--accent-wash); border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
+.connect-copy { margin: 0 auto; max-width: var(--measure); font-family: var(--font-serif); font-weight: var(--weight-regular); font-size: var(--text-h3); line-height: 1.25; color: var(--accent-ink); text-wrap: pretty; }
 .plate { margin: 0; }
 .plate-img { width: 100%; height: auto; display: block; background: var(--surface); }
 .plate-cap { display: flex; flex-direction: column; gap: var(--space-1); margin-top: var(--space-4); }
@@ -112,7 +120,7 @@ body { margin: 0; }
 .plate-size { font-family: var(--font-sans); font-size: var(--text-small); color: var(--fg-2); }
 
 /* Call to action (image slot pending) */
-.cta { border-top: 1px solid var(--rule); padding: var(--space-7) var(--space-5) var(--space-8); }
+.cta { border-top: 1px solid var(--rule); padding: var(--space-7) var(--space-5) var(--space-6); }
 .cta-figure { overflow: hidden; -webkit-mask-image: radial-gradient(ellipse 100% 100% at 50% 50%, #000 38%, transparent 88%); mask-image: radial-gradient(ellipse 100% 100% at 50% 50%, #000 38%, transparent 88%); }
 .cta-figure img { width: 100%; height: auto; display: block; }
 .cta-copy { margin: var(--space-6) 0 0; }
@@ -122,11 +130,11 @@ body { margin: 0; }
 .watch-title { font-family: var(--font-serif); font-weight: var(--weight-regular); font-size: var(--text-h4); line-height: 1.2; margin: 0; }
 .watch-meta { font-family: var(--font-sans); font-size: var(--text-small); color: var(--fg-2); margin: var(--space-2) 0 0; }
 
-.solution { border-top: 1px solid var(--rule); padding: var(--space-7) var(--space-5) var(--space-8); }
+.solution { border-top: 1px solid var(--rule); padding: var(--space-7) var(--space-5) var(--space-6); }
 .solution-title { font-family: var(--font-serif); font-weight: var(--weight-regular); font-size: var(--text-h2); line-height: 1.1; margin: 0 0 var(--space-5); }
 .solution-copy { font-size: var(--text-body); line-height: var(--leading-body); color: var(--fg-1); margin: 0 0 var(--space-6); max-width: var(--measure); }
 .solution-lead { font-family: var(--font-sans); font-size: var(--text-label); font-weight: var(--weight-medium); letter-spacing: var(--tracking-label); text-transform: uppercase; color: var(--fg-3); margin: 0 0 var(--space-2); }
-.solution-kinds { list-style: none; margin: 0 0 var(--space-7); padding: 0; }
+.solution-kinds { list-style: none; margin: 0 0 var(--space-6); padding: 0; }
 .solution-kinds li { font-family: var(--font-serif); font-size: var(--text-lede); line-height: 1.3; color: var(--fg-1); padding: var(--space-4) 0; border-top: 1px solid var(--rule); }
 .solution-kinds li:last-child { border-bottom: 1px solid var(--rule); }
 .contact-btn { display: inline-flex; align-items: center; justify-content: center; min-height: 52px; padding: 0 var(--space-6); background: var(--fg-1); color: var(--bg); text-decoration: none; font-family: var(--font-sans); font-weight: var(--weight-medium); font-size: var(--text-body); }
@@ -136,7 +144,7 @@ body { margin: 0; }
 .copy-btn:hover { background: var(--surface-recessed); }
 
 /* Proof (pending) */
-.proof { border-top: 1px solid var(--rule); padding: var(--space-8) var(--space-5) var(--space-9); }
+.proof { border-top: 1px solid var(--rule); padding: var(--space-8) var(--space-5) var(--space-7); }
 .proof-title { font-family: var(--font-serif); font-weight: var(--weight-regular); font-size: var(--text-h2); line-height: 1.1; margin: 0 0 var(--space-5); }
 .proof-copy { font-size: var(--text-body); line-height: var(--leading-body); color: var(--fg-1); margin: 0 0 var(--space-4); max-width: var(--measure); }
 
@@ -171,34 +179,47 @@ a:hover { text-decoration-color: var(--accent); }
       <img src="img/e7597acacca7deb1687cff3c6b4d04b0.jpg" alt="Now What" style="object-position: 85% center;">
       <img src="img/3eb1cdb259f241f887d6ed5e28f38439.jpg" alt="Brave New World" style="object-position: 72% center;">
     </div>
-    <p class="hero-hook">These are Wyoming wild horses, painted by our mom — a collection of 17 paintings called <em class="title">Morning Light in Mustang Pens</em>. We don't know what comes next for it.<span class="ask">We're hoping to connect with people in the know who can advise us and make introductions.</span></p>
+    <p class="hero-hook">These are Wyoming wild horses, painted by our mom — a collection of 17 paintings called <em class="title">Morning Light in Mustang Pens</em>. We don't know what comes next for it.</p>
   </section>
 
   <section class="collection">
     <div class="collection-eyebrow">Our Goal</div>
-    <p class="collection-copy">The family is raising funds for Ellen's care. If Mom had her wish, it would go to a person or a place where it would be meaningful. A foundation — wild horses, Western art, kids and art — could even use it to raise funds.</p>
-    <div class="collection-figure"><img src="img/7c9cfcff149a68155715df420b34723c.jpg" alt="Ellen in the gallery at the Brinton Museum"></div>
-    <p class="figure-cap">Ellen talking about the collection at the Brinton Museum, Big Horn, Wyoming, 2020.</p>
+    <p class="collection-copy">The family is raising funds for Ellen's care, and we're hoping to do it through the placement of this collection.</p>
+    <p class="collection-copy copy-cont">If Mom had her wish, it would go to a person or a place where it would be meaningful — someone who'd treasure it, or a foundation that could even use it to help raise funds.</p>
+  </section>
+
+  <section class="connect">
+    <p class="connect-copy">We're hoping to connect with people in the know who can advise us and make introductions.</p>
   </section>
 
   <section class="paintings">
     <header class="morning-intro">
       <h2 class="morning-title">Morning Light in Mustang Pens</h2>
-      <p class="morning-desc">Wild horses, gathered into roundup pens and painted in early light. Ellen was invited to join the roundups and photographed the herd — the horses coming in from the wild, circling the pen, then settling and finding their families. The paintings are where her fascination with light meets these animals in a working setting.</p>
-      <blockquote class="morning-quote">What I love to paint is light.<cite>Ellen</cite></blockquote>
+      <p class="morning-caption">Wild horses, gathered into roundup pens and painted in early light.</p>
+      <blockquote class="morning-quote">What I love to paint is light.</blockquote>
+      <figure class="morning-figure"><img src="img/7c9cfcff149a68155715df420b34723c.jpg" alt="Ellen in the gallery at the Brinton Museum"></figure>
+      <p class="morning-figcap">Ellen talking about the collection at the Brinton Museum, Big Horn, Wyoming, 2020.</p>
+      <p class="morning-desc">Ellen was invited to join the roundups and photographed the herd — the horses coming in from the wild, circling the pen, then settling and finding their families.</p>
     </header>
           <figure class="plate">
-        <img class="plate-img" src="img/3309837d86b07935776e6355a6b1f8d6.jpg" alt="Aurorae" loading="lazy">
-        <figcaption class="plate-cap">
-          <span class="plate-title">Aurorae</span>
-          <span class="plate-size">28 × 22 in.</span>
-        </figcaption>
-      </figure>
-      <figure class="plate">
         <img class="plate-img" src="img/3eb1cdb259f241f887d6ed5e28f38439.jpg" alt="Brave New World" loading="lazy">
         <figcaption class="plate-cap">
           <span class="plate-title">Brave New World</span>
           <span class="plate-size">30 × 24 in.</span>
+        </figcaption>
+      </figure>
+      <figure class="plate">
+        <img class="plate-img" src="img/5021ee4cc0784eb05752e97fb4775663.jpg" alt="Staying Close" loading="lazy">
+        <figcaption class="plate-cap">
+          <span class="plate-title">Staying Close</span>
+          <span class="plate-size">36 × 24 in.</span>
+        </figcaption>
+      </figure>
+      <figure class="plate">
+        <img class="plate-img" src="img/3309837d86b07935776e6355a6b1f8d6.jpg" alt="Aurorae" loading="lazy">
+        <figcaption class="plate-cap">
+          <span class="plate-title">Aurorae</span>
+          <span class="plate-size">28 × 22 in.</span>
         </figcaption>
       </figure>
       <figure class="plate">
@@ -265,13 +286,6 @@ a:hover { text-decoration-color: var(--accent); }
         </figcaption>
       </figure>
       <figure class="plate">
-        <img class="plate-img" src="img/5021ee4cc0784eb05752e97fb4775663.jpg" alt="Staying Close" loading="lazy">
-        <figcaption class="plate-cap">
-          <span class="plate-title">Staying Close</span>
-          <span class="plate-size">36 × 24 in.</span>
-        </figcaption>
-      </figure>
-      <figure class="plate">
         <img class="plate-img" src="img/4ad483ac1604557d0996aa2dfd617469.jpg" alt="The Inspection" loading="lazy">
         <figcaption class="plate-cap">
           <span class="plate-title">The Inspection</span>
@@ -306,7 +320,7 @@ a:hover { text-decoration-color: var(--accent); }
           <span class="plate-size">24 × 24 in.</span>
         </figcaption>
       </figure>
-    <blockquote class="morning-quote">I just feel so lucky that I fell into this. I was always painting them running — the iconic freedom theme — but here it's something different.<cite>Ellen</cite></blockquote>
+    <blockquote class="morning-quote">I just feel so lucky that I fell into this. I was always painting them running — the iconic freedom theme — but here it's something different.</blockquote>
   </section>
 
   <section class="cta">
@@ -321,7 +335,7 @@ a:hover { text-decoration-color: var(--accent); }
   </section>
 
   <section class="solution">
-    <h2 class="solution-title">We're grateful for any help from people who know this world — your read on what we're after, or a name we should talk to.</h2>
+    <h2 class="solution-title">We're grateful for any help from people who know this world — your read on what we're after, or an introduction to someone you think we should talk to.</h2>
     <a class="contact-btn" href="sms:+14066025383?&body=Hi%20Casey%2C%20I%27m%20%5Bname%5D.%20I%27d%20like%20to%20talk%20about%20your%20mom%27s%20artwork.">Text Casey</a>
     <p class="contact-alt"><span class="contact-num">(406) 602-5383</span> <button class="copy-btn" type="button" onclick="if(navigator.clipboard){navigator.clipboard.writeText('(406) 602-5383');this.textContent='Copied';}">Copy</button></p>
   </section>
@@ -337,6 +351,18 @@ a:hover { text-decoration-color: var(--accent); }
       <a class="gallery-thumb" href="#art-ram" aria-label="Enlarge painting of a bighorn ram"><img src="img/0babe0292fa578813de59f9ace8183a7.jpg" alt="Bighorn ram, painting by Ellen Dudley"></a>
       <a class="gallery-thumb" href="#art-deer" aria-label="Enlarge painting of two deer"><img src="img/b27889423f5be495866ecc8e2c3e445f.jpg" alt="Two deer, painting by Ellen Dudley"></a>
       <a class="gallery-thumb" href="#art-wolf" aria-label="Enlarge painting of a wolf"><img src="img/a117c75471cc56f449ffddaf2fd45b32.jpg" alt="Wolf, painting by Ellen Dudley"></a>
+      <a class="gallery-thumb" href="#art-horse-red" aria-label="Enlarge painting of a chestnut horse"><img src="img/93893ec3444248fc90adc8ca3a23cc7b.jpg" alt="Chestnut horse, painting by Ellen Dudley"></a>
+      <a class="gallery-thumb" href="#art-horse-palomino" aria-label="Enlarge painting of a palomino horse"><img src="img/dad00043120faad5f3016367d8722857.jpg" alt="Palomino horse, painting by Ellen Dudley"></a>
+      <a class="gallery-thumb" href="#art-horse-pale" aria-label="Enlarge painting of a pale horse"><img src="img/e2e4365dab8764c6ec718f074031f982.jpg" alt="Pale horse, painting by Ellen Dudley"></a>
+      <a class="gallery-thumb" href="#art-elk-green" aria-label="Enlarge painting of a bull elk"><img src="img/1a7993e41c7e8dd15b833a9e7cac91e4.jpg" alt="Bull elk, painting by Ellen Dudley"></a>
+      <a class="gallery-thumb" href="#art-elk-rest" aria-label="Enlarge painting of a resting bull elk"><img src="img/d09c1f7ad52e2cc78d2e9a30681a936a.jpg" alt="Resting bull elk, painting by Ellen Dudley"></a>
+      <a class="gallery-thumb" href="#art-elk-trees" aria-label="Enlarge painting of a bull elk among trees"><img src="img/7d5f4013d2709ac23f559575ee091fc1.jpg" alt="Bull elk among trees, painting by Ellen Dudley"></a>
+      <a class="gallery-thumb" href="#art-elk-white" aria-label="Enlarge painting of a pale bull elk"><img src="img/31c1db8cf90204b065426e2f6750cee9.jpg" alt="Pale bull elk, painting by Ellen Dudley"></a>
+      <a class="gallery-thumb" href="#art-deer-snow" aria-label="Enlarge painting of a mule deer in snow"><img src="img/f6f66a75c7d85e5a3c2d384336103143.jpg" alt="Mule deer in snow, painting by Ellen Dudley"></a>
+      <a class="gallery-thumb" href="#art-bison" aria-label="Enlarge painting of a bison"><img src="img/070d54e8bb27cc8bc55cd389cbb30461.jpg" alt="Bison, painting by Ellen Dudley"></a>
+      <a class="gallery-thumb" href="#art-goat" aria-label="Enlarge painting of mountain goats"><img src="img/4127cd026be6b0e4ec33e31f220ea588.jpg" alt="Mountain goats, painting by Ellen Dudley"></a>
+      <a class="gallery-thumb" href="#art-pronghorn" aria-label="Enlarge painting of a pronghorn"><img src="img/82ff4e34d7baa9a2f4cd0e4a1b233e73.jpg" alt="Pronghorn, painting by Ellen Dudley"></a>
+      <a class="gallery-thumb" href="#art-ram2" aria-label="Enlarge painting of a bighorn ram"><img src="img/30064656d2051504cfa0dd0d038a29eb.jpg" alt="Bighorn ram, painting by Ellen Dudley"></a>
     </div>
     <a class="lightbox" id="art-buck" href="#ellens-gallery" aria-label="Close enlarged painting"><img src="img/4a57bad038aade624aa091fba852b078.jpg" alt="Mule deer buck, painting by Ellen Dudley"></a>
     <a class="lightbox" id="art-ram" href="#ellens-gallery" aria-label="Close enlarged painting"><img src="img/0babe0292fa578813de59f9ace8183a7.jpg" alt="Bighorn ram, painting by Ellen Dudley"></a>
@@ -344,6 +370,18 @@ a:hover { text-decoration-color: var(--accent); }
     <a class="lightbox" id="art-wolf" href="#ellens-gallery" aria-label="Close enlarged painting"><img src="img/a117c75471cc56f449ffddaf2fd45b32.jpg" alt="Wolf, painting by Ellen Dudley"></a>
     <a class="lightbox" id="art-giraffe" href="#ellens-gallery" aria-label="Close enlarged painting"><img src="img/a395c13e28e909f308b88118713c6550.jpg" alt="Giraffe, painting by Ellen Dudley"></a>
     <a class="lightbox" id="art-lion" href="#ellens-gallery" aria-label="Close enlarged painting"><img src="img/c6ab0fcf085c44ead3496dd7551c7794.jpg" alt="Lion, painting by Ellen Dudley"></a>
+    <a class="lightbox" id="art-horse-red" href="#ellens-gallery" aria-label="Close enlarged painting"><img src="img/93893ec3444248fc90adc8ca3a23cc7b.jpg" alt="Chestnut horse, painting by Ellen Dudley"></a>
+    <a class="lightbox" id="art-horse-palomino" href="#ellens-gallery" aria-label="Close enlarged painting"><img src="img/dad00043120faad5f3016367d8722857.jpg" alt="Palomino horse, painting by Ellen Dudley"></a>
+    <a class="lightbox" id="art-horse-pale" href="#ellens-gallery" aria-label="Close enlarged painting"><img src="img/e2e4365dab8764c6ec718f074031f982.jpg" alt="Pale horse, painting by Ellen Dudley"></a>
+    <a class="lightbox" id="art-elk-green" href="#ellens-gallery" aria-label="Close enlarged painting"><img src="img/1a7993e41c7e8dd15b833a9e7cac91e4.jpg" alt="Bull elk, painting by Ellen Dudley"></a>
+    <a class="lightbox" id="art-elk-rest" href="#ellens-gallery" aria-label="Close enlarged painting"><img src="img/d09c1f7ad52e2cc78d2e9a30681a936a.jpg" alt="Resting bull elk, painting by Ellen Dudley"></a>
+    <a class="lightbox" id="art-elk-trees" href="#ellens-gallery" aria-label="Close enlarged painting"><img src="img/7d5f4013d2709ac23f559575ee091fc1.jpg" alt="Bull elk among trees, painting by Ellen Dudley"></a>
+    <a class="lightbox" id="art-elk-white" href="#ellens-gallery" aria-label="Close enlarged painting"><img src="img/31c1db8cf90204b065426e2f6750cee9.jpg" alt="Pale bull elk, painting by Ellen Dudley"></a>
+    <a class="lightbox" id="art-deer-snow" href="#ellens-gallery" aria-label="Close enlarged painting"><img src="img/f6f66a75c7d85e5a3c2d384336103143.jpg" alt="Mule deer in snow, painting by Ellen Dudley"></a>
+    <a class="lightbox" id="art-bison" href="#ellens-gallery" aria-label="Close enlarged painting"><img src="img/070d54e8bb27cc8bc55cd389cbb30461.jpg" alt="Bison, painting by Ellen Dudley"></a>
+    <a class="lightbox" id="art-goat" href="#ellens-gallery" aria-label="Close enlarged painting"><img src="img/4127cd026be6b0e4ec33e31f220ea588.jpg" alt="Mountain goats, painting by Ellen Dudley"></a>
+    <a class="lightbox" id="art-pronghorn" href="#ellens-gallery" aria-label="Close enlarged painting"><img src="img/82ff4e34d7baa9a2f4cd0e4a1b233e73.jpg" alt="Pronghorn, painting by Ellen Dudley"></a>
+    <a class="lightbox" id="art-ram2" href="#ellens-gallery" aria-label="Close enlarged painting"><img src="img/30064656d2051504cfa0dd0d038a29eb.jpg" alt="Bighorn ram, painting by Ellen Dudley"></a>
   </section>
 
 </div>
