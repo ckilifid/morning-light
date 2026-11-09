@@ -105,7 +105,7 @@ body { margin: 0; }
 /* The paintings, each shown whole */
 .paintings { padding: var(--space-7) var(--space-5) var(--space-4); display: flex; flex-direction: column; gap: var(--space-7); }
 .morning-intro { margin-bottom: calc(var(--space-5) - var(--space-7)); }
-.morning-title { font-family: var(--font-serif); font-weight: var(--weight-regular); font-size: var(--text-h2); line-height: 1.1; margin: 0 0 var(--space-2); }
+.morning-title { font-family: var(--font-serif); font-weight: var(--weight-regular); font-size: var(--text-h2); line-height: 1.1; margin: 0 0 var(--space-5); }
 .morning-caption { margin: 0 0 var(--space-5); font-family: var(--font-sans); font-size: var(--text-small); line-height: var(--leading-body); color: var(--fg-2); }
 .morning-desc { font-size: var(--text-body); line-height: var(--leading-body); color: var(--fg-2); margin: 0; max-width: var(--measure); }
 .morning-lead { font-family: var(--font-serif); font-weight: var(--weight-regular); font-size: var(--text-h4); line-height: 1.45; color: var(--fg-1); margin: 0 0 var(--space-5); max-width: var(--measure); }
@@ -180,7 +180,7 @@ body { background: var(--bg); }
 .site-head-title { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-family: var(--font-sans); font-size: var(--text-label); font-weight: var(--weight-medium); letter-spacing: var(--tracking-label); text-transform: uppercase; color: var(--fg-3); }
 .site-head-btn { flex: none; min-height: 32px; padding: 0 var(--space-3); background: var(--fg-1); color: var(--bg); border: 0; font-family: var(--font-sans); font-size: var(--text-meta); font-weight: var(--weight-medium); cursor: pointer; }
 .site-foot { display: none; }
-.hero-grid img, .plate-img, .morning-figure img, .gallery-thumb { cursor: zoom-in; }
+.hero-grid img, .plate-img, .gallery-thumb { cursor: zoom-in; }
 .jslb { position: fixed; inset: 0; z-index: 200; display: flex; align-items: center; justify-content: center; padding: var(--space-5); background: rgba(24,18,12,0.94); cursor: zoom-out; }
 .jslb img { max-width: 100%; max-height: 100%; width: auto; height: auto; object-fit: contain; }
 @media (min-width: 768px) {
@@ -192,8 +192,6 @@ body { background: var(--bg); }
   .paintings > * { grid-column: 1 / -1; }
   .paintings > .plate { grid-column: auto; }
   .connect-copy { margin-left: 0; }
-  .watch-link { max-width: 720px; }
-  .cta-copy { max-width: 720px; }
   .gallery { grid-template-columns: repeat(5, minmax(0, 1fr)); }
   .gallery-thumb img { height: 200px; }
   .site-foot { display: block; padding: var(--space-6) var(--space-7); border-top: 1px solid var(--rule); font-family: var(--font-sans); font-size: var(--text-small); color: var(--fg-3); }
@@ -217,11 +215,12 @@ body { background: var(--bg); }
 
   <section class="collection">
     <div class="collection-eyebrow">Our Goal</div>
-    <p class="collection-copy">Raising funds for Ellen's care, and we're hoping to do it through the placement of this collection.</p>
+    <p class="collection-copy">We're raising funds for Ellen's care, and hope to place the collection as a whole with a buyer ourselves before turning to established channels.</p>
+    <p class="collection-copy copy-cont">We're deeply grateful to the galleries and institutions that have brought tremendous value to placing Mom's work over the years. Given the cost of her care, we're exploring whether we can take on that work ourselves and preserve more of what the collection can bring toward her care.</p>
   </section>
 
   <section class="connect">
-    <p class="connect-copy">We're hoping to connect with people in the know who can advise us and make introductions.</p>
+    <p class="connect-copy">We're hopeful someone might understand and be open to talking with us. If you're in the know and could offer advice or make an introduction, we'd be grateful to hear from you.</p>
     <div class="connect-cta">
       <a class="contact-btn" href="sms:+14066025383?&body=Hi%20Casey%2C%20I%27m%20%5Bname%5D.%20I%27d%20like%20to%20talk%20about%20your%20mom%27s%20artwork.">Text Casey</a>
       <p class="contact-alt"><span class="contact-num">(406) 602-5383</span> <button class="copy-btn" type="button" onclick="if(navigator.clipboard){navigator.clipboard.writeText('(406) 602-5383');this.textContent='Copied';}">Copy</button></p>
@@ -230,10 +229,14 @@ body { background: var(--bg); }
 
   <section class="paintings">
     <header class="morning-intro">
+      <h2 class="morning-title">The Collection</h2>
       <p class="morning-lead">Wild horses, gathered into roundup pens and painted in early light. Ellen was invited to join the roundups and photographed the herd — coming in from the wild, circling the pen, then settling and finding their families.</p>
       <blockquote class="morning-quote">What I love to paint is light.</blockquote>
-      <figure class="morning-figure"><img src="img/7c9cfcff149a68155715df420b34723c.jpg" alt="Ellen in the gallery at the Brinton Museum"></figure>
-      <p class="morning-figcap">Ellen talking about the collection at the Brinton Museum, Big Horn, Wyoming, 2020.</p>
+      <a class="watch-link morning-figure" href="https://www.youtube.com/watch?v=tyzeH2hGyrs" target="_blank" rel="noopener">
+        <img src="img/7c9cfcff149a68155715df420b34723c.jpg" alt="Ellen's gallery talk at the Brinton Museum, 2020 — tap to play on YouTube">
+        <span class="watch-badge" aria-hidden="true"><svg viewBox="0 0 68 48" xmlns="http://www.w3.org/2000/svg"><path d="M66.52 7.74c-.78-2.93-2.49-5.41-5.42-6.19C55.79.13 34 .13 34 .13s-21.79 0-27.1 1.42c-2.93.78-4.64 3.26-5.42 6.19C.06 13.05.06 24 .06 24s0 10.95 1.42 16.26c.78 2.93 2.49 5.41 5.42 6.19C12.21 47.87 34 47.87 34 47.87s21.79 0 27.1-1.42c2.93-.78 4.64-3.26 5.42-6.19C67.94 34.95 67.94 24 67.94 24s0-10.95-1.42-16.26z" fill="#FF0000"/><path d="M27.2 34.4L44.8 24 27.2 13.6z" fill="#ffffff"/></svg></span>
+      </a>
+      <p class="morning-figcap">Ellen talking about the collection at the Brinton Museum, Big Horn, Wyoming, 2020. Tap the image for the full 15-minute interview.</p>
     </header>
           <figure class="plate">
         <img class="plate-img" src="img/3eb1cdb259f241f887d6ed5e28f38439.jpg" alt="Brave New World" loading="lazy">
@@ -357,16 +360,6 @@ body { background: var(--bg); }
     <blockquote class="morning-quote">I just feel so lucky that I fell into this. I was always painting them running — the iconic freedom theme — but here it's something different.</blockquote>
   </section>
 
-  <section class="cta">
-    <a class="watch-link" href="https://www.youtube.com/watch?v=tyzeH2hGyrs" target="_blank" rel="noopener">
-      <div class="cta-figure"><img src="img/172505a414133c55b59a543e89b3d4ad.jpg" alt="Ellen speaking at the Brinton Museum"></div>
-      <span class="watch-badge" aria-hidden="true"><svg viewBox="0 0 68 48" xmlns="http://www.w3.org/2000/svg"><path d="M66.52 7.74c-.78-2.93-2.49-5.41-5.42-6.19C55.79.13 34 .13 34 .13s-21.79 0-27.1 1.42c-2.93.78-4.64 3.26-5.42 6.19C.06 13.05.06 24 .06 24s0 10.95 1.42 16.26c.78 2.93 2.49 5.41 5.42 6.19C12.21 47.87 34 47.87 34 47.87s21.79 0 27.1-1.42c2.93-.78 4.64-3.26 5.42-6.19C67.94 34.95 67.94 24 67.94 24s0-10.95-1.42-16.26z" fill="#FF0000"/><path d="M27.2 34.4L44.8 24 27.2 13.6z" fill="#ffffff"/></svg></span>
-    </a>
-    <div class="cta-copy">
-      <p class="watch-title">Ellen's gallery talk at the Brinton Museum, 2020</p>
-      <p class="watch-meta">About 15 minutes · tap the image to play on YouTube</p>
-    </div>
-  </section>
 
   <section class="solution">
     <h2 class="solution-title">We're grateful for any help from people who know this world — your read on what we're after, or an introduction to someone you think we should talk to.</h2>
@@ -447,7 +440,7 @@ body { background: var(--bg); }
   }
   document.addEventListener('keydown', function (e) { if (e.key === 'Escape') close(); });
   document.addEventListener('click', function (e) {
-    var t = e.target.closest('.hero-grid img, .plate-img, .morning-figure img, .gallery-thumb');
+    var t = e.target.closest('.hero-grid img, .plate-img, .gallery-thumb');
     if (!t) return;
     var im = t.tagName === 'IMG' ? t : t.querySelector('img');
     if (!im) return;
